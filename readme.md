@@ -1,57 +1,26 @@
-# Gravatar for Laravel 5 - 12
+# Gravatar for Laravel 12 & 13
 
-[![Total Downloads](https://poser.pugx.org/creativeorange/gravatar/d/total.svg)](https://packagist.org/packages/creativeorange/gravatar)
-[![Latest Stable Version](https://poser.pugx.org/creativeorange/gravatar/v/stable.svg)](https://packagist.org/packages/creativeorange/gravatar)
-[![License](https://poser.pugx.org/creativeorange/gravatar/license.svg)](https://packagist.org/packages/creativeorange/gravatar)
+[![Total Downloads](https://poser.pugx.org/backpack/gravatar/d/total.svg)](https://packagist.org/packages/backpack/gravatar)
+[![Latest Stable Version](https://poser.pugx.org/backpack/gravatar/v/stable.svg)](https://packagist.org/packages/backpack/gravatar)
+[![License](https://poser.pugx.org/backpack/gravatar/license.svg)](https://packagist.org/packages/backpack/gravatar)
+
+> NOTE: This is a fork of https://github.com/brainpink/gravatar. We had to fork it, to add Laravel 13 support. All the work is credited to the maintainers of that package. 
 
 ## Installation
 
 First, pull in the package through Composer via the command line:
 ```js
-composer require creativeorange/gravatar ~1.0
+composer require backpack/gravatar
 ```
 
 or add the following to your composer.json file and run `composer update`.
 
 ```js
 "require": {
-    "creativeorange/gravatar": "~1.0"
+    "backpack/gravatar": "~1.0"
 }
 ```
 
-Then include the service provider within (Laravel 5.3 or below) `app/config/app.php`.
-
-```php
-'providers' => [
-    'Creativeorange\Gravatar\GravatarServiceProvider'
-];
-```
-
-If using Laravel 5.4, include service provider withing `config/app.php`
-
-```php
-'providers' => [
-    Creativeorange\Gravatar\GravatarServiceProvider::class
-];
-```
-
-If you want to use the facade, add this to de bottom of `app/config/app.php`
-And, for convenience, add a facade alias to this same file at the bottom:
-
-```php
-'aliases' => [
-    'Gravatar' => 'Creativeorange\Gravatar\Facades\Gravatar',
-];
-```
-
-If you are using Laravel 5.4 or greater, add as follows, add to `config/app.php`
-
-```php
-'aliases' => [
-    'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
-];
-```
-		
 
 Finally, publish the config by running the `php artisan vendor:publish` command
 
